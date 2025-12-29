@@ -208,4 +208,6 @@ __marimo__/
 
 # Gauge
 .backup
+.temp
+image
 GEMINI.md
