@@ -22,7 +22,7 @@ def gaussian_heatmap(keypoints, input_size=640, output_size=160, sigma=2):
 
     return torch.from_numpy(heatmaps)
 
-def visualize_dataset_sample(dataset, index):
+def visualize_sample(dataset, index):
     # 1. 데이터셋에서 샘플 가져오기
     image, heatmaps = dataset[index]
     
@@ -53,8 +53,8 @@ def visualize_dataset_sample(dataset, index):
     plt.title(f"{index} Heatmap")
     plt.imshow(img_to_show) # 배경에 원본 이미지
     # 히트맵의 크기를 원본 이미지 크기(640x640)에 맞게 확대하여 겹침
-    plt.imshow(combined_heatmap, cmap='jet', alpha=0.5, extent=(0, 640, 640, 0)) 
-    plt.axis('off')
+    plt.imshow(combined_heatmap, cmap="jet", alpha=0.5, extent=(0, 640, 640, 0)) 
+    plt.axis("off")
 
     plt.tight_layout()
     plt.show()
